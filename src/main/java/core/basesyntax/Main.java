@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 import core.basesyntax.service.Reader;
+import core.basesyntax.service.Writer;
 import core.basesyntax.service.impl.ReaderImpl;
 import core.basesyntax.service.impl.ReportCreator;
-import core.basesyntax.service.Writer;
 import core.basesyntax.service.impl.WriterImpl;
 import core.basesyntax.strategy.TransactionHandler;
 import java.util.ArrayList;

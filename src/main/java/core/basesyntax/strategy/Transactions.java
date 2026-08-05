@@ -1,10 +1,10 @@
 package core.basesyntax.strategy;
 
+import core.basesyntax.service.Transaction;
 import core.basesyntax.service.impl.BalanceTransaction;
 import core.basesyntax.service.impl.PurchaseTransaction;
 import core.basesyntax.service.impl.ReturnTransaction;
 import core.basesyntax.service.impl.SupplyTransaction;
-import core.basesyntax.service.Transaction;
 
 public enum Transactions {
     BALANCE("b", new BalanceTransaction()),

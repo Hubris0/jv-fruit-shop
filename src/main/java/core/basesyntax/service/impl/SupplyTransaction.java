@@ -1,8 +1,8 @@
 package core.basesyntax.service.impl;
 
-import core.basesyntax.service.Transaction;
-
 import static core.basesyntax.db.Storage.fruits;
+
+import core.basesyntax.service.Transaction;
 
 public class SupplyTransaction implements Transaction {
 

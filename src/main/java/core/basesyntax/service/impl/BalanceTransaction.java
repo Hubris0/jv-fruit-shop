@@ -1,6 +1,7 @@
 package core.basesyntax.service.impl;
 
 import static core.basesyntax.db.Storage.fruits;
+
 import core.basesyntax.model.Fruit;
 import core.basesyntax.service.Transaction;
 
