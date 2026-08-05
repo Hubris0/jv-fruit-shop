@@ -1,16 +1,15 @@
-package core.basesyntax.service.impl;
-
-import static core.basesyntax.db.Storage.fruits;
+package core.basesyntax.strategy;
 
 import core.basesyntax.model.Fruit;
-import core.basesyntax.service.Transaction;
+
+import static core.basesyntax.db.Storage.*;
 
 public class BalanceTransaction implements Transaction {
 
     @Override
     public void process(String fruitName, int amount) {
-        if (fruits.stream().anyMatch(fruit -> fruit.getName().equals(fruitName))) {
-            fruits.stream()
+        if (getFruits().stream().anyMatch(fruit -> fruit.getName().equals(fruitName))) {
+            getFruits().stream()
                     .filter(fruit -> fruit.getName().equals(fruitName))
                     .findFirst()
                     .ifPresent(fruit -> fruit.setQuantity(amount));
@@ -19,6 +18,6 @@ public class BalanceTransaction implements Transaction {
         Fruit fruit = new Fruit();
         fruit.setName(fruitName);
         fruit.setQuantity(amount);
-        fruits.add(fruit);
+        addFruit(fruit);
     }
 }

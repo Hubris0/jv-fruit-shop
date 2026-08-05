@@ -1,6 +1,4 @@
-package core.basesyntax.service.impl;
-
-import core.basesyntax.service.Transaction;
+package core.basesyntax.strategy;
 
 public class ReturnTransaction implements Transaction {
 

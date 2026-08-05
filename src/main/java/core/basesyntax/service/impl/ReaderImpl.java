@@ -1,19 +1,25 @@
 package core.basesyntax.service.impl;
 
 import core.basesyntax.service.Reader;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ReaderImpl implements Reader {
     public ArrayList<String> readFromFile(String fileName) {
-        try {
-            List<String> lines = Files.readAllLines(Paths.get(fileName));
-            return new ArrayList<>(lines);
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            ArrayList<String> lines = new ArrayList<>();
+
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+
+            return lines;
         } catch (IOException e) {
-            throw new RuntimeException("input file not found", e);
+            throw new RuntimeException("Error reading file: " + fileName, e);
         }
     }
 }
