@@ -1,8 +1,8 @@
 package core.basesyntax.strategy;
 
+import static core.basesyntax.db.Storage.addFruit;
+import static core.basesyntax.db.Storage.getFruits;
 import core.basesyntax.model.Fruit;
-
-import static core.basesyntax.db.Storage.*;
 
 public class BalanceTransaction implements Transaction {
 
