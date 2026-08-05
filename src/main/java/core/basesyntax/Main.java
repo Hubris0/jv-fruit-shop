@@ -1,12 +1,11 @@
 package core.basesyntax;
 
 import core.basesyntax.service.Reader;
-import core.basesyntax.service.ReaderImpl;
-import core.basesyntax.service.ReportCreator;
+import core.basesyntax.service.impl.ReaderImpl;
+import core.basesyntax.service.impl.ReportCreator;
 import core.basesyntax.service.Writer;
-import core.basesyntax.service.WriterImpl;
+import core.basesyntax.service.impl.WriterImpl;
 import core.basesyntax.strategy.TransactionHandler;
-
 import java.util.ArrayList;
 
 public class Main {

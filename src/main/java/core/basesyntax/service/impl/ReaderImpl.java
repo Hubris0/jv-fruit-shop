@@ -1,4 +1,6 @@
-package core.basesyntax.service;
+package core.basesyntax.service.impl;
+
+import core.basesyntax.service.Reader;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,7 +14,7 @@ public class ReaderImpl implements Reader {
             List<String> lines = Files.readAllLines(Paths.get(fileName));
             return new ArrayList<>(lines);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("input file not found", e);
         }
     }
 }
